@@ -30,11 +30,11 @@ This branch is for building of the LineageOS 14.1.
  * FM Radio
  * Offline charging
  * Camera HDR
+ * Youtube
+ * HW Decoder
 
 ### Not Working:
-* Youtube Zoom
-* Hotspot
-* HW Decoder
+* Hotspot (Open Hotspot)
 
 ### Thanks to:
  * Daniel_hk
