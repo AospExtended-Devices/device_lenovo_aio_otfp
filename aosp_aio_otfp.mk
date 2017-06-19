@@ -31,15 +31,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit Lineage's custom product configuration
-$(call inherit-product, vendor/aim/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Call device specific makefile
 $(call inherit-product, device/lenovo/aio_otfp/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aim_aio_otfp
+PRODUCT_NAME := aosp_aio_otfp
 PRODUCT_DEVICE := aio_otfp
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo K3 Note
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+# Camera
+PRODUCT_PACKAGES += \
+  Snap

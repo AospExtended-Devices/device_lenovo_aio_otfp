@@ -52,9 +52,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcam.halsensor
 
-# Snap Camera
+# Camera
 PRODUCT_PACKAGES += \
-     Snap
+  Snap
 
 # Kernel & Ad-Away
 PRODUCT_PACKAGES += \
