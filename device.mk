@@ -39,31 +39,63 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 #endif
 
 #PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel 
+    $(LOCAL_KERNEL):kernel
 
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := aio_otfp
 
 # RIL
 PRODUCT_PACKAGES += \
-    libccci_util 
+    libccci_util
 
 # Camera
 PRODUCT_PACKAGES += \
-    libcam.halsensor 
-    
+    libcam.halsensor
+
 # Snap Camera
 PRODUCT_PACKAGES += \
      Snap
-     
+
+# Kernel & Ad-Away
+PRODUCT_PACKAGES += \
+    AdAway \
+    KernelAdiutor \
+
 # Browser
    PRODUCT_PACKAGES += \
-      Jelly         
+      Jelly
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    fsck.f2fs \
+    mkfs.f2fs \
+    make_ext4fs
+
+# exFAT
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+
+# NTFS
+PRODUCT_PACKAGES += \
+    fsck.ntfs \
+    mkfs.ntfs \
+    mount.ntfs
+
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
+# WallpaperPicker
+PRODUCT_PACKAGES += \
+    WallpaperPicker
 
 #Engmode
 PRODUCT_PACKAGES += \
     EngineerMode
-       
+
 PRODUCT_PACKAGES += \
 	libwvmsym
 
@@ -72,13 +104,22 @@ PRODUCT_PACKAGES += \
 	libgralloc_extra
 
 PRODUCT_PACKAGES += \
-	libnl_2 
+	libnl_2
+
+# Power
+PRODUCT_PACKAGES += \
+    power.default \
+    power.mt6752
 
 # Lights
 PRODUCT_PACKAGES += \
     lights.mt6752
 
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+#Spn
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -105,6 +146,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/bluetooth/bt_stack.conf.debug:system/etc/bluetooth/bt_stack.conf.debug \
 	$(LOCAL_PATH)/prebuilt/etc/bluetooth/bt_stack.conf.sqc:system/etc/bluetooth/bt_stack.conf.sqc
 
+# Menu Key
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/Generic:system/usr/keylayout/Generic.kl \
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.mt6752 \
@@ -114,7 +159,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/gps/slp_conf:system/etc/slp_conf \
     $(LOCAL_PATH)/prebuilt/etc/gps/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
-    
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
@@ -137,8 +182,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal.mid.conf:system/etc/.tp/thermal.mid.conf \
     $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf \
     $(LOCAL_PATH)/configs/thermal/thermal.performance.conf:system/etc/.tp/thermal.performance.conf \
-	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc 
-    
+	$(LOCAL_PATH)/configs/thermal/.ht120.mtc:system/etc/.tp/.ht120.mtc
+
 # Charger
 PRODUCT_PACKAGES += \
     charger
