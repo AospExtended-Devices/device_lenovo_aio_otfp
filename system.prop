@@ -120,9 +120,3 @@ ro.mtk_matv_analog_support=1
 ro.mtk_wapi_support=1
 ro.mtk_wappush_support=1
 
-
-# PixlernBlitz
-media.sf.omx-plugin=libffmpeg_omx.so
-media.sf.extractor-plugin=libffmpeg_extractor.so
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
