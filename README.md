@@ -1,7 +1,7 @@
 Lenovo K3 Note 
 ==============
 
-This branch is for building of the LineageOS 14.1.
+This branch is for building Aosp Roms.
 
 # About Device
 
@@ -32,11 +32,10 @@ This branch is for building of the LineageOS 14.1.
  * Camera HDR
  * Youtube
  * HW Decoder
-
-### Not Working:
-* Hotspot (Open Hotspot)
+ * Hotspot
 
 ### Thanks to:
  * Daniel_hk
  * Adam Belamri
  * Sandeep Sethi
+ * Gsandeep
