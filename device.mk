@@ -29,7 +29,7 @@ PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Hack for building without kernel sources
-#$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
 # Prebuilt Kernel
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
